@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Detection</title>
+    <link rel="stylesheet" href="../static/css/abc.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Breast Cancer Detection</h1>
+        <p>
+            Early detection saves lives. Get started by predicting breast cancer. Breast cancer is cancer that forms
+            in the cells of the breasts. After skin cancer, breast cancer is the most common cancer diagnosed in women
+            in the United States. Breast cancer survival rates have increased largely due to factors such as earlier detection,
+            personalized treatment, and a better understanding of the disease.
+        </p>
+        <img src="../static/assets/images (1).jpeg" alt="Breast Cancer Awareness">
+        <br>
+        <button class="predict-btn" onclick="document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' })">
+            Predict Now
+        </button>
+    </div>
+
+    <div class="form-section">
+        <h2>Enter Cell Details (in cm)</h2>
+        <div class="size-img">
+            <img src="../static/assets/new img1.webp" alt="cancer size">
+        </div>
+        <form method="POST" action="{{ url_for('predict') }}">
+            <div>
+                <label for="clump-thickness">mean radius:</label>
+                <input type="number" id="clump-thickness" name="clump-thickness" required>
+            </div>
+            <div>
+                <label for="uniform-cell-size">mean concavity:</label>
+                <input type="number" id="uniform-cell-size" name="uniform-cell-size" required>
+            </div>
+            <div>
+                <label for="uniform-cell-shape">texture error:</label>
+                <input type="number" id="uniform-cell-shape" name="uniform-cell-shape" required>
+            </div>
+            <div>
+                <label for="marginal-adhesion">worst radius:</label>
+                <input type="number" id="marginal-adhesion" name="marginal-adhesion" required>
+            </div>
+            
+            <button type="submit">Predict Cancer</button>
+        </form>
+    </div>
+</body>
+</html>
+

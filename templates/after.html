@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Page</title>
+    <link rel="stylesheet" href="../static/css/after.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+
+        {% if data == 'malignant' %}
+        <h2>Yes, you have breast cancer</h2>
+        <img src="../static/assets/after img.avif" alt="motivational">
+        {% else %}
+        <h2>No, you don't have breast cancer</h2>
+        <img src="../static/assets/Cancer Free Cover.jpg" alt="happy">
+        {% endif %}
+
+        <br>
+        <a href="/">Go back to home page</a>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+body {
+    background-color: #c8e6c9;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0000ee;
+    font-size: 1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
